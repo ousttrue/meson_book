@@ -12,10 +12,10 @@ const config = {
   tagline: 'meson buildtool tips',
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'ousttrue.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/meson_book/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -64,7 +64,7 @@ const config = {
             label: 'MesonBook',
           },
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/ousttrue/meson_book',
             label: 'GitHub',
             position: 'right',
           },
@@ -78,7 +78,7 @@ const config = {
             items: [
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/ousttrue/meson_book',
               },
             ],
           },
