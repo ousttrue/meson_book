@@ -10,6 +10,9 @@ https://mesonbuild.com/
 - https://mesonbuild.com/Release-notes.html
 
 msvc 版の gstreamer が一挙にビルドできてしまうなど、強力なビルドツールです。
+
+- [Windows上の Python-3.11 で動く Gtk4 や GStreamer をビルドする](https://qiita.com/ousttrue/items/ac591be1654615e1b178)
+
 ローカルディレクトリーで依存もビルドする使いかたに向いているので、
 意外とWindows(MSVC) と相性が良いです。
 
@@ -24,19 +27,28 @@ python モジュールとして pip でインストールします。
 
 https://pypi.org/project/meson/
 
-```
-pip install meson
+```sh
+> pip install meson
 ```
 
 :::note 
 ninja も pip でいける
 
-```
-pip install ninja
+```sh
+> pip install ninja
 ```
 
 - cmake もいける。
+
+```sh
+> pip install cmake
+```
+
 - zig もいける。
+```sh
+> pip install ziglang
+```
+
 :::
 
 ## 参考

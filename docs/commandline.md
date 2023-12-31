@@ -1,41 +1,46 @@
 # commandline
 
 ## setup
-configure 的。
 
-```
-meson setup builddir --prefix prefix_full_path
+```sh
+> meson setup builddir --prefix prefix_full_path
 ```
 
 reconfigure
 
-```
-meson setup builddir --prefix prefix_full_path --reconfigure
+```sh
+> meson setup builddir --prefix prefix_full_path --reconfigure
 ```
 
-```
-meson setup builddir --prefix prefix_full_path --wipe
+clean
+
+```sh
+> meson setup builddir --prefix prefix_full_path --wipe
 ```
 
 ## build
 
-```
-meson compile -C buildir
+```sh
+> meson compile -C buildir
 ```
 
+:::note
 `-C buildir` を省略するとカレントディレクトリを使う。
+:::
 
 ## install
 
-```
-meson install -C builddir
+```sh
+> meson install -C builddir
 ```
 
+:::note
 `-C buildir` を省略するとカレントディレクトリを使う。
+:::
 
-## vscode 例
+## vscode の task 定義例
 
-```.vscode/tasks.json
+```js title=".vscode/tasks.json"
 {
     // See https://go.microsoft.com/fwlink/?LinkId=733558
     // for the documentation about the tasks.json format
@@ -78,15 +83,20 @@ meson install -C builddir
 }
 ```
 
+:::note
+clangd の設定。
+
 meson は `compile_commands.json` を自動的に生成するので、 `clangd` で参照する。
 
-```.vscode/settings.json
+```js title=".vscode/settings.json"
 {
     "clangd.arguments": [
         "--compile-commands-dir=${workspaceFolder}/builddir"
     ],
 }
 ```
+
+:::
 
 :::note
 ビルドディレクトリが cmake と被らないように builddir を使う。
@@ -96,5 +106,11 @@ https://marketplace.visualstudio.com/items?itemName=mesonbuild.mesonbuild
 がデフォルトで builddir を使う。
 task も builddir にしておいた。
 :::
+
+## project init
+
+空プロジェクトの生成
+
+https://mesonbuild.com/Project-templates.html
 
 

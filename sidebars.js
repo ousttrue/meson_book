@@ -27,6 +27,11 @@ const sidebars = {
       label: 'dependency',
       items: [
         'dependency/index',
+        'dependency/use_dependency',
+        'dependency/make_dependency',
+        'dependency/wrap_file',
+        'dependency/wrap_file_examples',
+        'dependency/wrap_db',
         'dependency/boost',
       ],
     },

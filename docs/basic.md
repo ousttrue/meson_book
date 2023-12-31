@@ -10,6 +10,11 @@ https://mesonbuild.com/howtox.html
 
 https://mesonbuild.com/FAQ.html
 
+ファイル構成
+
+- main.cpp
+- meson.build
+
 ```meson.build
 project('tutorial', 'cpp')
 
@@ -18,33 +23,31 @@ executable('demo', 'main.cpp',
 include_directories: demo_inc)
 ```
 
-```
-meson setup buildir
-ninja -C builddir
-```
-
-もしくは
-
-```
-meson setup buildir
-meson compile -C builddir # 直接 ninja するのとの違いは未確認。meson.build, subproject などの meson の変更を反映する能力が違うかもしれない
+```sh
+> meson setup buildir
+> meson compile -C builddir
 ```
 
 もしくは
 
+```sh
+> meson setup buildir --prefix FULL_PATH_TO_INSTALL
+> meson install -C builddir
 ```
-meson setup buildir --prefix FULL_PATH_TO_INSTALL
-meson install -C builddir
-```
+
+:::note 
 
 install までやれば exe と dll が `PREFIX/bin` に集まるので扱いやすい場合がある。
+Windows では exe と同じパスからも dll がサーチされる。
 
-## 慣習
+:::
+
+## 命名規則(慣習)
 
 https://mesonbuild.com/Style-guide.html
 
 :::note 
-変数名に _inc, _lib, _dep を付けて型を表す
+変数名に _inc, _lib, _dep を付けて型を表します。
 
 例えば hoge という project の場合、
 
@@ -79,8 +82,8 @@ executable('fuga', ['main.cpp'],
 
 https://mesonbuild.com/Configuring-a-build-directory.html
 
-```
-meson configure builddir
+```sh
+> meson configure builddir
 ```
 
 ## .gitignore
@@ -93,5 +96,4 @@ meson configure builddir
 !/subprojects/packagefiles
 !/subprojects/some.wrap # 👈 *.wrap でだいたい OK だが、wrap-reidrect をコミットすると動かなくなる場合あり。依存の依存を浅い階層にコピーしている？
 ```
-
 
