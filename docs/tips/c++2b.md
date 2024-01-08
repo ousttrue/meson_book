@@ -1,6 +1,4 @@
-# tips
-
-## c++2b など新しいフラグに未対応
+# c++2b など新しいフラグに未対応
 
 - `1.0`
 - `1.1rc2`
@@ -13,10 +11,4 @@ https://github.com/mesonbuild/meson/pull/9053
 
 の該当個所に `c++2b` を追加してしまった。
 gcc-12 で `std::expected` が動いた。
-
-## meson + msvc on github-action
-
-`vcvars64.bat` 的な対策
-
-https://github.com/bus1/cabuild
 

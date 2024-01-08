@@ -1,4 +1,4 @@
-# vscode
+# language server と formatter
 
 https://marketplace.visualstudio.com/items?itemName=mesonbuild.mesonbuild
 

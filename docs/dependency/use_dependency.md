@@ -59,6 +59,16 @@ some_dep = declare_dependency(
 )
 ```
 
+## subproject の dependency 参照
+
+- some(project)
+  - some_lib(build target)
+  - some_dep(dependency)
+
+```meson.build
+some_dep = subproject('some').get_variable('some_dep')
+```
+
 ## wrap redirect
 
 ネストした subprojects の wrap ファイルが上位階層にコピーされる。

@@ -1,26 +1,30 @@
 # dependency を作る
 
-## declare\_dependency
+## declare_dependency
 
-```meson.build
-project('some', 'cpp')
-some_lib = library('some', ['some.cpp'])
-some_dep = declare_dependency(
-    link_with some_lib
+https://mesonbuild.com/Reference-manual_functions.html#declare_dependency
+
+```meson.build title="とりあえず include を渡す例"
+some_dep = declare_dependency( # 👈
+    include_directories: include_directories('.'),
 )
 ```
 
-以下のように `project` が namespace になる。
-
-* some(project)
-  * some\_lib(build target)
-  * some\_dep(dependency)
+```meson.build title="link も含む例"
+some_lib = library('some', ['some.cpp'])
+some_dep = declare_dependency( # 👈
+    include_directories: include_directories('.'),
+    link_with: some_lib,
+    compile_args: ['-DNOMINMAX'], # target の cpp_args, c_args 両用
+)
+```
 
 ## subprojects に展開する
 
+subproject ディレクトリに他のプロジェクトを展開して参照できる。
 Intel TBB を展開する例。
 
-```
+```meson.build title="subproject/tbb/meson.build"
 project('tbb', 'cpp')
 
 cc = meson.get_compiler('cpp')
@@ -53,4 +57,3 @@ tbb_dep = subproject('tbb').get_variable('tbb_dep')
 # もしくは
 tbb_dep = dependency('tbb') # meson.override_dependency が対応する
 ```
-

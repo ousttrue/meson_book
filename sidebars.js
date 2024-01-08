@@ -24,27 +24,62 @@ const sidebars = {
     'project',
     {
       type: 'category',
+      label: 'target',
+      items: [
+        'target/index',
+        'target/compile',
+        'target/link',
+      ],
+    },
+    {
+      type: 'category',
       label: 'dependency',
       items: [
         'dependency/index',
-        'dependency/use_dependency',
         'dependency/make_dependency',
-        'dependency/wrap_file',
-        'dependency/wrap_file_examples',
-        'dependency/wrap_db',
+        'dependency/use_dependency',
         'dependency/boost',
       ],
     },
-    'crosscompile',
     {
       type: 'category',
-      label: 'tools',
+      label: 'subprojects',
       items: [
-        'tools/cmake',
-        'tools/vscode',
-      ]
+        'subprojects/index',
+        'subprojects/wrap_file',
+        'subprojects/wrap_file_examples',
+        'subprojects/wrap_db',
+      ],
     },
-    'tips',
+    {
+      type: 'category',
+      label: 'code generation',
+      items: [
+        'code_generation/configure_file',
+        'code_generation/custom_command',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'toolchain',
+      items: [
+        'toolchain/index',
+        'toolchain/nativefile',
+        'toolchain/crossfile',
+        'toolchain/zig_cc',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'tips',
+      items: [
+        'tips/c++2b',
+        'tips/github-action',
+        'tips/cmake',
+        'tips/lsp_formatter',
+        'tips/using',
+      ],
+    },
   ],
 };
 
