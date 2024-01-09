@@ -21,21 +21,36 @@ const sidebars = {
     'index',
     'basic',
     'commandline',
-    'project',
     {
       type: 'category',
-      label: 'target',
+      label: 'meson_dsl',
+      link: { type: 'doc', id: 'meson_dsl/index' },
       items: [
-        'target/index',
-        'target/compile',
-        'target/link',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'project',
+      link: { type: 'doc', id: 'project/index' },
+      items: [
+        {
+          type: 'category',
+          label: 'target',
+          link: { type: 'doc', id: 'project/target/index' },
+          items: [
+
+            'project/target/compile',
+            'project/target/link',
+            'project/target/install',
+          ],
+        },
       ],
     },
     {
       type: 'category',
       label: 'dependency',
+      link: { type: 'doc', id: 'dependency/index' },
       items: [
-        'dependency/index',
         'dependency/make_dependency',
         'dependency/use_dependency',
         'dependency/boost',
@@ -44,8 +59,8 @@ const sidebars = {
     {
       type: 'category',
       label: 'subprojects',
+      link: { type: 'doc', id: 'subprojects/index' },
       items: [
-        'subprojects/index',
         'subprojects/wrap_file',
         'subprojects/wrap_file_examples',
         'subprojects/wrap_db',
@@ -56,14 +71,14 @@ const sidebars = {
       label: 'code generation',
       items: [
         'code_generation/configure_file',
-        'code_generation/custom_command',
+        'code_generation/custom_target',
       ],
     },
     {
       type: 'category',
       label: 'toolchain',
+      link: { type: 'doc', id: 'toolchain/index' },
       items: [
-        'toolchain/index',
         'toolchain/nativefile',
         'toolchain/crossfile',
         'toolchain/zig_cc',

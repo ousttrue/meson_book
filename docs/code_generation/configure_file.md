@@ -1,5 +1,7 @@
 # config.h を生成する
 
+https://mesonbuild.com/Configuration.html
+
 ```py
 project(
     'App',

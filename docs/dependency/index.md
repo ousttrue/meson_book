@@ -1,5 +1,7 @@
 # dependency
 
+https://mesonbuild.com/Dependencies.html
+
 meson は project 内に変数として target などを持つ。
 subproject から get_variable で変数(subproject, dep, target) などを得られる。
 

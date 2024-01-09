@@ -1,5 +1,9 @@
 # basic
 
+https://mesonbuild.com/Running-Meson.html
+
+https://mesonbuild.com/Meson-sample.html
+
 https://mesonbuild.com/Tutorial.html
 
 https://mesonbuild.com/IndepthTutorial.html

@@ -1,5 +1,7 @@
 # target
 
+https://mesonbuild.com/Build-targets.html
+
 https://mesonbuild.com/Reference-manual_returned_build_tgt.html
 
 ## executable
@@ -47,8 +49,11 @@ some_lib = library('some', [ # default_library により shared か static が�
 )
 ```
 
-- static_library
-- shared_library
-- both_libraries 👈 static と shared の両方をビルドさせる
+### static_library
 
+### shared_library
+
+### both_libraries
+
+static と shared の両方をビルドさせる
 

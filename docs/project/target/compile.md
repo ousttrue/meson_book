@@ -2,6 +2,8 @@
 
 ## include
 
+https://mesonbuild.com/Include-directories.html
+
 ```meson.build
 executable('hell', 'main.cpp',
   include_directories: include_directories('.'),
@@ -19,7 +21,11 @@ https://mesonbuild.com/Reference-manual_functions.html#library_implicit_include_
 必要に応じて `implicit_include_directories: false` を明示する。
 :::
 
-## global cflags
+## cflags
+
+https://mesonbuild.com/Adding-arguments.html
+
+### global
 
 ```meson.build
 add_project_arguments('-DMYPROJ=projname', language : 'c')
@@ -32,9 +38,10 @@ add_project_arguments(
 )
 ```
 
-## cflags
+### target
 
 ```meson.build
 c_args: ['-DNOMINMAX'],
 cpp_args: ['-D_USE_MATH_DEFINES'],
 ```
+

@@ -1,4 +1,8 @@
-# crosscompile
+# toolchain
+
+https://mesonbuild.com/Machine-files.html
+
+https://mesonbuild.com/Reference-tables.html
 
 setup 時に引数 `--native-file NATIVE_FILE` もしくは `--cross-file CROSS_FILE` を使うことで
 違うコンパイラを選択できる。

@@ -1,5 +1,7 @@
 # shader から header を作る
 
+https://mesonbuild.com/Generating-sources.html
+
 ```meson.build
 kernels = [
     'hlslComputeKernel.hlsl',

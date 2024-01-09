@@ -4,10 +4,10 @@ author: ousttrue
 slide: false
 ---
 
-https://mesonbuild.com/
+[Manual](https://mesonbuild.com/Manual.html)
 
 - https://github.com/mesonbuild/meson
-- https://mesonbuild.com/Release-notes.html
+- [Release notes](https://mesonbuild.com/Release-notes.html)
 
 :::note info
 msvc 版の gstreamer が一挙にビルドできてしまうなど、強力なビルドツールです。
@@ -60,8 +60,6 @@ zig もいける。
 :::
 
 ## 参考
-
-https://mesonbuild.com/Users.html
 
 ### 2022
 
