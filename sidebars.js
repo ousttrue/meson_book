@@ -26,50 +26,12 @@ const sidebars = {
       items: [
         'write/basic',
         'write/commandline',
-        {
-          type: 'category',
-          label: 'meson_dsl',
-          link: { type: 'doc', id: 'write/meson_dsl/index' },
-          items: [
-          ],
-        },
-        {
-          type: 'category',
-          label: 'project',
-          link: { type: 'doc', id: 'write/project/index' },
-          items: [
-            {
-              type: 'category',
-              label: 'target',
-              link: { type: 'doc', id: 'write/project/target/index' },
-              items: [
-                'write/project/target/compile',
-                'write/project/target/link',
-                'write/project/target/install',
-              ],
-            },
-          ],
-        },
-        {
-          type: 'category',
-          label: 'dependency',
-          link: { type: 'doc', id: 'write/dependency/index' },
-          items: [
-            'write/dependency/make_dependency',
-            'write/dependency/use_dependency',
-            'write/dependency/boost',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'subprojects',
-          link: { type: 'doc', id: 'write/subprojects/index' },
-          items: [
-            'write/subprojects/wrap_file',
-            'write/subprojects/wrap_file_examples',
-            'write/subprojects/wrap_db',
-          ],
-        },
+        'write/project/target',
+        'write/project/executable',
+        'write/project/library',
+        'write/project/compile',
+        'write/project/link',
+        'write/project/install',
         {
           type: 'category',
           label: 'code generation',
@@ -78,25 +40,25 @@ const sidebars = {
             'write/code_generation/custom_target',
           ],
         },
+        'write/syntax',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'dependency編',
+      link: { type: 'doc', id: 'dependency/index' },
+      items: [
+        'dependency/make_dependency',
+        'dependency/use_dependency',
+        'dependency/boost',
         {
           type: 'category',
-          label: 'toolchain',
-          link: { type: 'doc', id: 'write/toolchain/index' },
+          label: 'subprojects',
+          link: { type: 'doc', id: 'dependency/subprojects/index' },
           items: [
-            'write/toolchain/nativefile',
-            'write/toolchain/crossfile',
-            'write/toolchain/zig_cc',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'tips',
-          items: [
-            'write/tips/c++2b',
-            'write/tips/github-action',
-            'write/tips/cmake',
-            'write/tips/lsp_formatter',
-            'write/tips/using',
+            'dependency/subprojects/wrap_file',
+            'dependency/subprojects/wrap_file_examples',
+            'dependency/subprojects/wrap_db',
           ],
         },
       ],
@@ -121,6 +83,27 @@ const sidebars = {
             'build/gtk/gtk4',
           ]
         },
+        'build/using',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'toolchain',
+      link: { type: 'doc', id: 'toolchain/index' },
+      items: [
+        'toolchain/nativefile',
+        'toolchain/crossfile',
+        'toolchain/zig_cc',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'tips',
+      items: [
+        'tips/c++2b',
+        'tips/github-action',
+        'tips/cmake',
+        'tips/lsp_formatter',
       ],
     },
     {

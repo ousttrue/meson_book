@@ -21,11 +21,17 @@ clean
 ## build
 
 ```sh
-> meson compile -C buildir
+> meson compile -C builddir
 ```
 
 :::note
-`-C buildir` を省略するとカレントディレクトリを使う。
+
+```sh
+> meson setup build
+> cd build
+build> meson compile # `-C builddir` を省略するとカレントディレクトリを使う。
+```
+
 :::
 
 ## install
@@ -33,10 +39,6 @@ clean
 ```sh
 > meson install -C builddir
 ```
-
-:::note
-`-C buildir` を省略するとカレントディレクトリを使う。
-:::
 
 ## vscode の task 定義例
 
@@ -86,7 +88,7 @@ clean
 :::note
 clangd の設定。
 
-meson は `compile_commands.json` を自動的に生成するので、 `clangd` で参照する。
+meson は `builddir/compile_commands.json` を自動的に生成するので、 `clangd` で参照する。
 
 ```js title=".vscode/settings.json"
 {
@@ -113,4 +115,9 @@ task も builddir にしておいた。
 
 https://mesonbuild.com/Project-templates.html
 
+```sh
+$ mkdir project_name
+$ cd project_name
+$ meson init --language=c --name=myproject --version=0.1
+```
 

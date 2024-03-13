@@ -1,4 +1,4 @@
-# project
+# project()
 
 project root の meson.build の先頭に記述する。
 プロジェクト名、使う言語(c, cpp...)が必須。
@@ -32,6 +32,7 @@ project の default_options 変更時は `meson setup --wipe` が必要
 :::
 
 ### default_library
+
 static と shared を選択できる。デフォルトは shared ?
 
 ```meson title="meson.build"
@@ -54,5 +55,3 @@ default_options: ['cpp_std=c++17']
 if host_machine.system() == 'windows'
 endif
 ```
-
-
