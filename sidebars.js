@@ -19,80 +19,116 @@ const sidebars = {
   // But you can create a sidebar manually
   tutorialSidebar: [
     'index',
-    'basic',
-    'commandline',
     {
       type: 'category',
-      label: 'meson_dsl',
-      link: { type: 'doc', id: 'meson_dsl/index' },
+      label: 'write meson poject',
+      link: { type: 'doc', id: 'write/index' },
       items: [
-      ],
-    },
-    {
-      type: 'category',
-      label: 'project',
-      link: { type: 'doc', id: 'project/index' },
-      items: [
+        'write/basic',
+        'write/commandline',
         {
           type: 'category',
-          label: 'target',
-          link: { type: 'doc', id: 'project/target/index' },
+          label: 'meson_dsl',
+          link: { type: 'doc', id: 'write/meson_dsl/index' },
           items: [
-
-            'project/target/compile',
-            'project/target/link',
-            'project/target/install',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'project',
+          link: { type: 'doc', id: 'write/project/index' },
+          items: [
+            {
+              type: 'category',
+              label: 'target',
+              link: { type: 'doc', id: 'write/project/target/index' },
+              items: [
+                'write/project/target/compile',
+                'write/project/target/link',
+                'write/project/target/install',
+              ],
+            },
+          ],
+        },
+        {
+          type: 'category',
+          label: 'dependency',
+          link: { type: 'doc', id: 'write/dependency/index' },
+          items: [
+            'write/dependency/make_dependency',
+            'write/dependency/use_dependency',
+            'write/dependency/boost',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'subprojects',
+          link: { type: 'doc', id: 'write/subprojects/index' },
+          items: [
+            'write/subprojects/wrap_file',
+            'write/subprojects/wrap_file_examples',
+            'write/subprojects/wrap_db',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'code generation',
+          items: [
+            'write/code_generation/configure_file',
+            'write/code_generation/custom_target',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'toolchain',
+          link: { type: 'doc', id: 'write/toolchain/index' },
+          items: [
+            'write/toolchain/nativefile',
+            'write/toolchain/crossfile',
+            'write/toolchain/zig_cc',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'tips',
+          items: [
+            'write/tips/c++2b',
+            'write/tips/github-action',
+            'write/tips/cmake',
+            'write/tips/lsp_formatter',
+            'write/tips/using',
           ],
         },
       ],
     },
     {
       type: 'category',
-      label: 'dependency',
-      link: { type: 'doc', id: 'dependency/index' },
+      label: 'build編',
+      link: { type: 'doc', id: 'build/index' },
       items: [
-        'dependency/make_dependency',
-        'dependency/use_dependency',
-        'dependency/boost',
+        {
+          type: 'category',
+          label: 'gtk',
+          link: { type: 'doc', id: 'build/gtk/index' },
+          items: [
+            'build/gtk/deps',
+            'build/gtk/glib',
+            'build/gtk/pkg-config',
+            'build/gtk/glib-introspection',
+            'build/gtk/g-ir-scanner',
+            'build/gtk/glib-gir',
+            'build/gtk/gstreamer',
+            'build/gtk/gtk4',
+          ]
+        },
       ],
     },
     {
       type: 'category',
-      label: 'subprojects',
-      link: { type: 'doc', id: 'subprojects/index' },
+      label: 'vala編',
+      // link: { type: 'doc', id: 'meson_dsl/index' },
       items: [
-        'subprojects/wrap_file',
-        'subprojects/wrap_file_examples',
-        'subprojects/wrap_db',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'code generation',
-      items: [
-        'code_generation/configure_file',
-        'code_generation/custom_target',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'toolchain',
-      link: { type: 'doc', id: 'toolchain/index' },
-      items: [
-        'toolchain/nativefile',
-        'toolchain/crossfile',
-        'toolchain/zig_cc',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'tips',
-      items: [
-        'tips/c++2b',
-        'tips/github-action',
-        'tips/cmake',
-        'tips/lsp_formatter',
-        'tips/using',
+        'vala/index',
       ],
     },
   ],

@@ -9,11 +9,6 @@ slide: false
 - https://github.com/mesonbuild/meson
 - [Release notes](https://mesonbuild.com/Release-notes.html)
 
-:::note info
-msvc 版の gstreamer が一挙にビルドできてしまうなど、強力なビルドツールです。
-
-- [Windows上の Python-3.11 で動く Gtk4 や GStreamer をビルドする](https://qiita.com/ousttrue/items/ac591be1654615e1b178)
-:::
 
 ローカルディレクトリーで依存ライブラリーをビルドする使いかたができます。
 意外とWindows(MSVC) と相性が良いです。
