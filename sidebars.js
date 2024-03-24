@@ -77,10 +77,10 @@ const sidebars = {
             'build/gtk/glib',
             'build/gtk/pkg-config',
             'build/gtk/glib-introspection',
-            'build/gtk/g-ir-scanner',
             'build/gtk/glib-gir',
             'build/gtk/gstreamer',
             'build/gtk/gtk4',
+            'build/gtk/error',
           ]
         },
         'build/using',

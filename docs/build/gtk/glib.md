@@ -1,13 +1,17 @@
 # glib
 
-`-Dintrospection=disabled` を付けてビルドします。
-
 ```text title="循環する参照"
 glib <- gobject-introspectio
  |       ^
  |       |
  +-------+glib(のgir)
 ```
+
+:::tip
+
+`-Dintrospection=disabled` を付けてビルドします。
+
+:::
 
 ```sh title="powershellの例"
 $ meson setup builddir --prefix $PREFIX -Dbuildtype=release -Dintrospection=disabled
@@ -26,4 +30,3 @@ $ meson setup builddir --prefix $PREFIX -Dbuildtype=release -Dintrospection=disa
 
 $ meson install -C builddir
 ```
-
