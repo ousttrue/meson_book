@@ -1,18 +1,30 @@
 # `--native-file`
 
-meson がデフォルトで使うコンパイラ以外を使う。
+meson デフォルトとは別のコンパイラを使う
 
-:::note info
-'cc', 'gcc', 'g++', 'cl.exe' などをパスから探してデフォルトの
-コンパイラを来めているようです。
-:::
+## clang-19(windows)
 
-## clang-16 と libc++
-
-Ubuntu-22.04
+- https://github.com/mstorsjo/llvm-mingw を使う
+- https://github.com/GNOME/glib をビルドできた
 
 ```ini
-# std::expected 使えた
+[constants]
+toolchain = 'E:/llvm-mingw-20241203-ucrt-x86_64'
+
+[binaries]
+c= toolchain / 'bin/clang.exe'
+cpp= toolchain / 'bin/clang++.exe'
+c_ld = toolchain / 'bin/ld.lld.exe'
+cpp_ld = toolchain / 'bin/ld.lld.exe'
+ar = toolchain / 'bin/ar.exe'
+windres = toolchain / 'bin/windres.exe'
+```
+
+## clang-16 と libc++(Ubuntu-22.04)
+
+- std::expected を使えた
+
+```ini
 [constants]
 toolchain = '/usr/lib/llvm-16'
 
